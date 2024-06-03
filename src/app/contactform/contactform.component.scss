@@ -6,12 +6,17 @@
   margin-top: 100px;
 
   .left-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4px;
-    border-radius: 4px;
     background-color: #9747ff;
-    width: 50px;
-    position: absolute;
-    left: 0;
+    flex-grow: 1;
+    border-radius: 4px;
+  }
+
+  .right-line {
+    flex-grow: 1;
   }
 
   .contact-headline {
@@ -21,6 +26,7 @@
 
     h1 {
       font-size: 90px;
+      padding: 0 20px;
     }
   }
 }
@@ -47,6 +53,7 @@
     .left-side {
       width: 40%;
       margin-top: 50px;
+      padding: 0 20px;
 
       h3 {
         font-size: 32px;
