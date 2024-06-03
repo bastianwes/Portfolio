@@ -52,7 +52,7 @@
               I've read the <span class="privacy-policy">privacy policy</span> and agree to the processing of my data as
               outlined.
             </label>
-            @if (!acceptTerms.valid && acceptTerms.errors) {
+            @if (!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)) {
             <span class="error-message">Accept Terms is required</span>
             }
           </div>
