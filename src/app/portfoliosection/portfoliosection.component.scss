@@ -1,0 +1,136 @@
+.headline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  .portfolio-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .portfolio-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .right-line {
+      flex-grow: 1;
+      background-color: #9747ff;
+      height: 4px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      padding: 0 20px;
+    }
+
+    .left-line-wrapper {
+      position: relative;
+      flex-grow: 1;
+      height: 4px;
+
+      .left-line {
+        background-color: #141d2f;
+        height: 4px;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .left-line-cover {
+        background-color: #9747ff;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 150px;
+
+  .portfolio-wrapper-join {
+    width: 1168px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    .left-side {
+      width: 50%;
+    }
+
+    .right-side {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        font-size: 32px;
+        color: #9747ff;
+      }
+
+      span {
+        font-size: 23px;
+        color: #70e61c;
+      }
+    }
+  }
+
+  .portfolio-wrapper-el-pollo-loco {
+    width: 1168px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 100px;
+
+    .left-side {
+      width: 50%;
+    }
+
+    .right-side {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        font-size: 32px;
+        color: #9747ff;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      span {
+        font-size: 23px;
+        color: #70e61c;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      p {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

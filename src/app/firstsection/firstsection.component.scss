@@ -1,0 +1,143 @@
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.first-section-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+
+  .first-section {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+
+    .left-side {
+      display: flex;
+      justify-content: flex-start;
+      width: 40%;
+      max-height: 650px;
+
+      img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+      margin-bottom: 280px;
+
+      p {
+        transform: rotate(270deg);
+        font-size: 64px;
+        font-weight: 400;
+        position: relative;
+        bottom: 45px;
+        left: 20px;
+        letter-spacing: 2px;
+      }
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .my-name {
+          font-size: 76px;
+          z-index: 2;
+          font-weight: 700;
+        }
+
+        .frontend-dev {
+          font-size: 58px;
+          z-index: 2;
+          color: #9747ff;
+          font-weight: 400;
+          letter-spacing: 4px;
+          position: relative;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.social-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 86%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .left-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4px;
+    background-color: #9747ff;
+    border-radius: 4px;
+    min-width: 15vw;
+    width: 10%;
+  }
+
+  .github-linkedin-email {
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    width: 90%;
+
+    .e-mail {
+      font-size: 23px;
+    }
+
+    .social-png {
+      display: flex;
+      gap: 40px;
+      margin-right: 60px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.5s ease; /* Übergang für die Drehung */
+      }
+
+      img:hover {
+        transform: rotate(360deg); /* Bild um 360 Grad drehen */
+      }
+    }
+  }
+
+  .scroll-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: absolute;
+      cursor: pointer;
+      animation: moveUpDown 2s infinite;
+      margin-right: 50px;
+      margin-right: 400px;
+      margin-bottom: 100px;
+    }
+  }
+}

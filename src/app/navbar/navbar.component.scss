@@ -1,0 +1,19 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  width: 1440px;
+  height: 100px;
+
+  .right-side {
+    font-size: 23px;
+    list-style-type: none;
+    display: flex;
+    gap: 29px;
+  }
+
+  .left-side p {
+    font-size: 40px;
+  }
+}

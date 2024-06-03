@@ -1,0 +1,137 @@
+.contact-headline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+
+  .left-line {
+    height: 4px;
+    border-radius: 4px;
+    background-color: #9747ff;
+    width: 50px;
+    position: absolute;
+    left: 0;
+  }
+
+  .contact-headline {
+    display: flex;
+    justify-content: flex-start;
+    width: 1440px;
+
+    h1 {
+      font-size: 90px;
+    }
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .contact-wrapper {
+    width: 1440px;
+    display: flex;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+    .left-side {
+      width: 40%;
+      margin-top: 50px;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    .right-side {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 617px;
+        margin-top: 60px;
+      }
+
+      .input-group {
+        margin-bottom: 32px;
+        position: relative;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 15px 25px;
+        border: 1px solid #9747ff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 1em;
+      }
+
+      .contact-form input[type="text"]::placeholder,
+      .contact-form input[type="email"]::placeholder,
+      .contact-form textarea::placeholder {
+        color: white;
+      }
+
+      .contact-form input[type="submit"] {
+        width: 100%;
+        padding: 0.75em;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+      }
+
+      .contact-form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .contact-form input[type="text"]:valid,
+      .contact-form input[type="email"]:valid,
+      .contact-form textarea:valid {
+        border-color: #06db06; /* Green text color */
+      }
+
+      .input-group.invalid input[type="text"],
+      .input-group.invalid input[type="email"],
+      .input-group.invalid textarea {
+        border-color: red; /* Red border color for invalid input */
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.875em;
+        margin-top: 0.25em;
+        position: absolute;
+        bottom: -1.5em;
+        left: 0;
+      }
+
+      .input-group.invalid .error-message {
+        display: block;
+      }
+
+      .contact-form textarea {
+        resize: none;
+      }
+    }
+  }
+}

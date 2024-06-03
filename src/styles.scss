@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #141d2f;
+  font-family: "Poppins";
+  color: white;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/font/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.nav-bar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar is above other content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  width: 100%; /* Set to 100% to cover the full width of the viewport */
+  height: 100px;
+  background-color: #141d2f; /* Add background color to make sure it's visible */
+}
+
+.lets-talk-button {
+  width: 165px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #70e61c;
+  color: #fff;
+  font-size: 23px;
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.lets-talk-button:hover {
+  transform: scale(1.05);
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 50px;
+  margin-top: 35px;
+
+  .live-test-button {
+    padding: 15px, 30px, 15px, 30px;
+    background-color: #9747ff;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    width: 152px;
+    height: 58px;
+    cursor: pointer;
+  }
+
+  .github-button {
+    padding: 15px, 30px, 15px, 30px;
+    border-color: #70e61c;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    width: 137px;
+    height: 58px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,52 @@
+<div class="contact-headline-container">
+  <div class="left-line"></div>
+  <div class="contact-headline">
+    <h1>Contact</h1>
+  </div>
+</div>
+
+
+<div class="contact-container">
+  <div class="contact-wrapper">
+    <div class="left-side">
+      <h3>Got a problem to solve?</h3>
+      <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your
+        projects
+        with my work.</p>
+      <p>Need a Frontend developer? <b>Contact me!</b></p>
+    </div>
+    <div class="right-side">
+      <div class="contact-form">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <div class="input-group" [class.invalid]="!name.valid && name.touched">
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+              placeholder="Your name" required autocomplete="off">
+            @if (!name.valid && name.touched) {
+            <span class="error-message">Please enter your name</span>
+            }
+          </div>
+
+          <div class="input-group" [class.invalid]="!email.valid && email.touched">
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+              placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              autocomplete="off">
+            @if (!email.valid && email.touched) {
+            <span class="error-message">Please enter a valid email</span>
+            }
+          </div>
+
+          <div class="input-group" [class.invalid]="!message.valid && message.touched">
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+              placeholder="Your message" style="height:200px" required autocomplete="off"></textarea>
+            @if (!message.valid && message.touched) {
+            <span class="error-message">Please enter a message</span>
+            }
+          </div>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
