@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -13,6 +14,7 @@ export class ContactformComponent {
     name: '',
     email: '',
     message: '',
+    acceptTerms: false,
   };
 
   onSubmit(ngForm: NgForm) {
