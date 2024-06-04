@@ -2,14 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 10px;
   width: 100%;
+  background-color: #141d2f;
+
+  .right-line {
+    border: 2px solid #70e61c;
+    min-width: 50px;
+    flex-grow: 1;
+  }
+
+  .left-line {
+    flex-grow: 1;
+  }
 
   .about-me-section {
-    max-width: 1440px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1440px;
 
     .left-side {
       width: 30%;
@@ -38,8 +49,6 @@
     .right-side {
       display: flex;
       align-items: center;
-      position: absolute;
-      right: 0;
 
       .image-container-face {
         width: 453px;
@@ -49,13 +58,6 @@
         background-image: url("../../assets/img/face.png");
         background-repeat: no-repeat;
         background-size: cover;
-      }
-
-      .right-line {
-        height: 4px;
-        background-color: #70e61c;
-        flex-grow: 1;
-        min-width: 300px;
       }
     }
   }
