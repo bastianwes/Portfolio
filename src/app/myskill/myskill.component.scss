@@ -3,12 +3,17 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: #141d2f;
+  padding-top: 120px;
+  position: relative; /* Um die absolute Positionierung von .green-shadow zu ermöglichen */
+  overflow: hidden; /* Um sicherzustellen, dass keine überlaufenden Inhalte angezeigt werden */
 
   .my-skill-section {
     width: 1440px;
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
+    z-index: 2;
 
     .right-side {
       width: 30%;
@@ -53,6 +58,21 @@
         grid-gap: 25px;
         width: 100%;
       }
+    }
+  }
+
+  .green-shadow {
+    position: absolute;
+    top: 100px; /* Setze top auf 0, wenn das Bild am oberen Rand beginnen soll */
+    left: 0; /* Bild am linken Rand des Containers positionieren */
+    height: 100%; /* Volle Höhe des Containers */
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: auto; /* Behalte das Seitenverhältnis bei */
+      object-fit: contain;
+      position: absolute;
     }
   }
 }

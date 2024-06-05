@@ -3,7 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  padding-top: 100px;
+  background-color: #141d2f;
+  position: relative; /* Um die absolute Positionierung von .purple-shadow zu ermöglichen */
+  overflow: hidden;
 
   .portfolio-text {
     font-size: 16px;
@@ -60,7 +63,11 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 150px;
+  padding-top: 150px;
+  background-color: #141d2f;
+  position: relative; /* Um die absolute Positionierung von .purple-shadow-big zu ermöglichen */
+  overflow: hidden;
+  min-height: 100vh;
 
   .portfolio-wrapper-join {
     width: 1168px;
@@ -68,6 +75,7 @@
     align-items: center;
     gap: 80px;
     padding: 0 20px;
+    z-index: 2;
 
     .left-side {
       width: 50%;
@@ -98,6 +106,7 @@
     flex-direction: row-reverse;
     gap: 100px;
     padding: 0 20px;
+    z-index: 2;
 
     .left-side {
       width: 50%;
@@ -134,5 +143,20 @@
         justify-content: flex-end;
       }
     }
+  }
+
+  .purple-shadow-big {
+    position: absolute;
+    top: 661px;
+    left: 0;
+    z-index: 1;
+    height: 748.73px; /* Feste Höhe */
+    width: 650px; /* Feste Breite */
+  }
+
+  .purple-shadow-big img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }

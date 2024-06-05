@@ -4,11 +4,15 @@
   justify-content: center;
   width: 100%;
   background-color: #141d2f;
+  padding-top: 200px;
+  position: relative;
+  overflow: hidden;
 
   .right-line {
     border: 2px solid #70e61c;
     min-width: 50px;
     flex-grow: 1;
+    z-index: 2;
   }
 
   .left-line {
@@ -21,6 +25,7 @@
     align-items: center;
     width: 100%;
     max-width: 1440px;
+    z-index: 3;
 
     .left-side {
       width: 30%;
@@ -60,6 +65,21 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+    }
+  }
+
+  .purple-shadow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    right: -600px;
+
+    img {
+      height: auto;
+      width: auto; /* Behalte das Seitenverhältnis bei */
+      object-fit: fill;
     }
   }
 }

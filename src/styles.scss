@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #141d2f;
   font-family: "Poppins";
   color: white;
 }
@@ -39,6 +38,7 @@
   margin-top: 20px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  z-index: 3;
 }
 
 .lets-talk-button:hover {
@@ -61,8 +61,11 @@
     cursor: pointer;
   }
 
+  .live-test-button:hover {
+    transform: scale(1.05);
+  }
+
   .github-button {
-    padding: 15px, 30px, 15px, 30px;
     border-color: #70e61c;
     border-radius: 10px;
     font-size: 23px;
@@ -70,5 +73,10 @@
     width: 137px;
     height: 58px;
     cursor: pointer;
+    background-color: #141d2f;
+  }
+
+  .github-button:hover {
+    transform: scale(1.05);
   }
 }

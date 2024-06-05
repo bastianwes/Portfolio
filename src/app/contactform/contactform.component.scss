@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 100px;
+  padding-top: 100px;
+  background-color: #141d2f;
 
   .left-line {
     display: flex;
@@ -36,6 +37,23 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: #141d2f;
+  position: relative; /* Um die absolute Positionierung von .purple-shadow-bottom zu ermöglichen */
+  overflow: hidden;
+  padding-bottom: 100px;
+
+  .purple-shadow-bottom {
+    position: absolute;
+    bottom: -10px;
+    left: -240px;
+    width: 400px;
+
+    img {
+      height: 526px;
+      width: 916px;
+      object-fit: fill;
+    }
+  }
 
   .contact-wrapper {
     width: 1440px;
@@ -129,6 +147,7 @@
         border-radius: 10px;
         box-sizing: border-box;
         font-size: 1em;
+        background-color: #141d2f;
       }
 
       .contact-form input[type="text"]::placeholder,
