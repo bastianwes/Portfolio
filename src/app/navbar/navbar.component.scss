@@ -5,7 +5,6 @@
   color: #ffffff;
   width: 1440px;
   height: 100px;
-  cursor: pointer;
   padding: 0 20px;
 
   .right-side {
@@ -14,12 +13,14 @@
     display: flex;
     gap: 29px;
 
-    li {
-      transition: color 0.3s ease; /* Übergangseffekt für die Farbänderung */
+    a {
+      transition: color 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    li:hover {
-      color: #9747ff; /* Farbe bei Hover */
+    a:hover {
+      color: #9747ff;
     }
   }
 
