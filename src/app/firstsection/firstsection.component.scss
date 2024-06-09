@@ -105,7 +105,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  top: 89%;
+  top: 96%;
   z-index: 2;
 
   .left-line {
@@ -128,14 +128,6 @@
     width: 1440px;
     align-items: center;
     padding-right: 20px;
-
-    .scroll-down {
-      display: flex;
-
-      img {
-        animation: moveUpDown 2s infinite;
-      }
-    }
 
     p {
       font-size: 23px;
@@ -173,5 +165,17 @@
 
   img {
     width: 100%;
+  }
+}
+
+.scroll-down {
+  display: flex;
+  position: absolute;
+  z-index: 4;
+  top: 80%;
+  right: 100px;
+
+  img {
+    animation: moveUpDown 2s infinite;
   }
 }
