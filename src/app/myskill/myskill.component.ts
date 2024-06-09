@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './myskill.component.html',
-  styleUrl: './myskill.component.scss'
+  styleUrl: './myskill.component.scss',
 })
 export class MyskillComponent {
-
+  handleClick() {
+    let element = document.getElementById('my-contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

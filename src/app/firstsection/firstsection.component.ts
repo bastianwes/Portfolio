@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './firstsection.component.html',
-  styleUrl: './firstsection.component.scss'
+  styleUrl: './firstsection.component.scss',
 })
 export class FirstsectionComponent {
-
+  handleClick() {
+    let element = document.getElementById('my-contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
