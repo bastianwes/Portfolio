@@ -15,4 +15,16 @@ export class PortfoliosectionComponent {
   openPokedex() {
     window.open('https://pokedex.bastian-weschasit.de/', '_blank');
   }
+
+  openGitHubGame() {
+    window.open('https://github.com/bastianwes/El-Pollo-Loco-/', '_blank');
+  }
+
+  openGitHubPokedex() {
+    window.open('https://github.com/bastianwes/pokedex/', '_blank');
+  }
+
+  openGitHubJoin() {
+    window.open('https://github.com/bastianwes/Join/', '_blank');
+  }
 }

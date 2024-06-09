@@ -50,4 +50,8 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
   }
+
+  goUp() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

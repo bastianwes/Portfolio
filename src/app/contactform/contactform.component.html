@@ -60,7 +60,7 @@
           </div>
           <input type="submit" value="Send message" class="custom-submit" [disabled]="!contactForm.valid">
         </form>
-        <div class="go-up-button">
+        <div class="go-up-button" (click)="goUp()">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="currentColor" stroke-width="2" />
             <path
