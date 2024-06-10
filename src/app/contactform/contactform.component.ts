@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -17,6 +17,7 @@ export class ContactformComponent {
     name: '',
     email: '',
     message: '',
+    acceptTerms: false,
   };
 
   post = {
@@ -31,7 +32,7 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
