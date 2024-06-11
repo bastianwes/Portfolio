@@ -9,6 +9,7 @@ import { PortfoliosectionComponent } from './portfoliosection/portfoliosection.c
 import { ContactformComponent } from './contactform/contactform.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     ContactformComponent,
     FooterComponent,
     ImpressumComponent,
+    PrivacyComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
