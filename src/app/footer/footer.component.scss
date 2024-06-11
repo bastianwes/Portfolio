@@ -53,6 +53,15 @@
       display: flex;
       justify-content: flex-start;
       margin-top: -26px;
+      cursor: pointer;
+
+      p {
+        transition: color 0.3s ease;
+      }
+
+      p:hover {
+        color: #9747ff;
+      }
     }
   }
 }
