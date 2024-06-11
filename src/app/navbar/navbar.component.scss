@@ -1,9 +1,17 @@
+.nav-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #141d2f;
+}
+
 .nav-bar {
+  width: 1440px;
+  max-width: 100%; // Ensure it doesn't overflow on smaller screens
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
-  width: 1440px;
   height: 100px;
   padding: 0 20px;
 
@@ -30,5 +38,55 @@
 
   .left-side p {
     font-size: 40px;
+  }
+
+  .burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .burger-menu:hover {
+    color: #9747ff;
+  }
+
+  @media (max-width: 650px) {
+    .right-side {
+      display: none;
+    }
+
+    .burger-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: #141d2f;
+  padding: 10px;
+  border-radius: 5px;
+
+  a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #9747ff;
+  }
+
+  a.active {
+    color: #9747ff;
+  }
+
+  &.show {
+    display: flex;
   }
 }

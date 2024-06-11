@@ -7,52 +7,54 @@
   background-color: #141d2f;
   position: relative; /* Um die absolute Positionierung von .purple-shadow zu ermöglichen */
   overflow: hidden;
+}
 
-  .portfolio-text {
-    font-size: 16px;
-    font-weight: 400;
+.portfolio-text {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.portfolio-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .right-line {
+    flex-grow: 1;
+    background-color: #9747ff;
+    height: 4px;
+    border-radius: 4px;
   }
 
-  .portfolio-headline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  h1 {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding: 0 20px;
+  }
 
-    .right-line {
-      flex-grow: 1;
-      background-color: #9747ff;
+  .left-line-wrapper {
+    position: relative;
+    flex-grow: 1;
+    height: 4px;
+
+    .left-line {
+      background-color: #141d2f;
       height: 4px;
       border-radius: 4px;
+      width: 100%;
     }
 
-    h1 {
-      font-size: 90px;
-      font-weight: 700;
-      letter-spacing: 5px;
-      padding: 0 20px;
-    }
-
-    .left-line-wrapper {
-      position: relative;
-      flex-grow: 1;
+    .left-line-cover {
+      background-color: #9747ff;
       height: 4px;
-
-      .left-line {
-        background-color: #141d2f;
-        height: 4px;
-        border-radius: 4px;
-        width: 100%;
-      }
-
-      .left-line-cover {
-        background-color: #9747ff;
-        height: 4px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 50%;
-      }
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
     }
   }
 }
@@ -158,5 +160,106 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+}
+
+@media (max-width: 1440px) {
+  .portfolio-container {
+    padding-top: 50px;
+
+    .purple-shadow-big {
+      position: absolute;
+      top: 0;
+      left: -300px;
+      z-index: 1;
+
+      width: auto;
+    }
+
+    .portfolio-wrapper-join,
+    .portfolio-wrapper-el-pollo-loco {
+      flex-direction: column;
+      gap: 0;
+
+      .right-side {
+        text-align: center; /* Text-Inhalt zentrieren */
+        margin-top: -40px;
+        width: 70%;
+
+        h2,
+        span,
+        p,
+        .buttons-wrapper {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+
+      .left-side {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 450px;
+          height: 450px;
+        }
+      }
+    }
+  }
+
+  .portfolio-container .portfolio-wrapper-el-pollo-loco {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .headline-container .portfolio-headline h1 {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-container .portfolio-wrapper-join .right-side,
+  .portfolio-container .portfolio-wrapper-el-pollo-loco .right-side {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-container .portfolio-wrapper-join,
+  .portfolio-container .portfolio-wrapper-el-pollo-loco {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+
+    .left-side {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .right-side {
+      width: 90%; /* Stellen Sie sicher, dass die Breite hier 90% beträgt */
+    }
+  }
+
+  .portfolio-container .portfolio-wrapper-el-pollo-loco {
+    padding: 80px 20px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .headline-container .portfolio-headline h1 {
+    font-size: 45px;
+  }
+
+  .portfolio-container .portfolio-wrapper-join .right-side,
+  .portfolio-container .portfolio-wrapper-el-pollo-loco .right-side {
+    width: 90%; /* Ändern Sie die Breite auf 100%, um kleinere Bildschirmgrößen zu unterstützen */
+    padding: 0 20px;
   }
 }

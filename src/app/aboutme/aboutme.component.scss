@@ -64,6 +64,7 @@
         background-image: url("../../assets/img/face.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
       }
     }
   }
@@ -80,6 +81,74 @@
       height: auto;
       width: auto; /* Behalte das Seitenverhältnis bei */
       object-fit: fill;
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .about-me-container .about-me-section {
+    display: flex; /* Ensure this is what you want */
+
+    .left-side {
+      width: 35%; /* Set the width to 35% */
+
+      .about-me h1 {
+        font-size: 65px;
+      }
+    }
+  }
+
+  .about-me-container .about-me-section .right-side .image-container-face {
+    width: 370px;
+    height: 370px;
+  }
+
+  .about-me-container .purple-shadow img {
+    height: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  .about-me-container .about-me-section {
+    display: flex;
+    justify-content: center;
+
+    .right-side {
+      display: none;
+    }
+
+    .left-side {
+      width: 100%;
+      padding: 0 20px;
+
+      .about-me h1 {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .about-me-container .right-line {
+    display: none;
+  }
+
+  .about-me-container .purple-shadow {
+    height: 96vh;
+    right: -443px;
+    top: -35px;
+
+    img {
+      height: 84%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me-container {
+    padding-top: 150px;
+
+    .about-me-section .left-side .about-me h1 {
+      font-size: 45px;
     }
   }
 }

@@ -14,6 +14,7 @@
     background-color: #9747ff;
     flex-grow: 1;
     border-radius: 4px;
+    min-width: 20px;
   }
 
   .right-line {
@@ -71,7 +72,8 @@
     .left-side {
       width: 40%;
       margin-top: 50px;
-      padding: 0 20px;
+      padding-left: 30px;
+      padding-right: 20px;
 
       h3 {
         font-size: 32px;
@@ -92,6 +94,7 @@
         width: 617px;
         margin-top: 60px;
         padding-right: 20px;
+        z-index: 4;
       }
 
       form {
@@ -102,6 +105,8 @@
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
+        position: relative;
+        top: 50px;
 
         svg {
           rect {
@@ -163,9 +168,6 @@
         border-radius: 10px;
         background-color: #b6b6b6;
         color: white;
-        font-size: 1em;
-        font-size: 23px;
-        max-width: 50%;
         display: block;
         margin: 0 auto;
       }
@@ -187,7 +189,7 @@
 
       .error-message {
         color: red;
-        font-size: 0.875em;
+        font-size: 1em;
         margin-top: 0.25em;
         position: absolute;
         bottom: -1.7em;
@@ -234,6 +236,54 @@
           color: #9747ff;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1485px) {
+  .contact-container .contact-wrapper .left-side {
+    padding-left: 45px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contact-headline-container .contact-headline {
+    h1 {
+      font-size: 65px;
+      padding: 0 10px;
+    }
+  }
+
+  .contact-container .contact-wrapper {
+    display: block;
+
+    .left-side {
+      width: 80%;
+      padding-left: 35px;
+    }
+
+    .right-side {
+      padding-left: 30px;
+      justify-content: flex-start;
+      width: 90%;
+
+      .contact-form {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-container .contact-wrapper .right-side .contact-form {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-headline-container .contact-headline {
+    h1 {
+      font-size: 45px;
     }
   }
 }

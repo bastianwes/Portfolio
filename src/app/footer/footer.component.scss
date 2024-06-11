@@ -56,3 +56,42 @@
     }
   }
 }
+
+@media (max-width: 730px) {
+  .footer-container {
+    height: auto;
+
+    .footer-and-impressum {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .impressum p {
+        position: relative;
+        top: 20px;
+        margin-bottom: 50px;
+      }
+
+      .footer-wrapper {
+        display: block;
+
+        .my-name {
+          font-size: 17px;
+          padding: 20px;
+        }
+
+        .github-linkedin-email {
+          justify-content: center;
+          padding: 10px 20px 20px 20px;
+        }
+
+        .name h3 {
+          text-align: center;
+          top: 30px;
+          padding-bottom: 40px;
+          position: relative;
+        }
+      }
+    }
+  }
+}

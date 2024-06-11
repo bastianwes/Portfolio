@@ -76,6 +76,7 @@
         flex-direction: column;
         align-items: center;
         background-color: transparent;
+        position: relative;
 
         .my-name {
           font-size: 76px;
@@ -99,6 +100,90 @@
   }
 }
 
+@media (max-width: 1480px) {
+  .first-section-container .first-section {
+    display: block;
+
+    .right-side {
+      justify-content: center;
+      position: relative; /* Make it relatively positioned */
+      left: -38px;
+
+      p {
+        font-size: 47px;
+        bottom: 36px;
+      }
+
+      .name .my-name {
+        font-size: 60px !important;
+      }
+
+      .name .frontend-dev {
+        letter-spacing: 0 !important; /* Verwenden Sie !important, wenn es notwendig ist */
+        font-size: 52px !important;
+      }
+
+      .name .lets-talk-button {
+        right: 50px;
+        margin-top: -5px;
+      }
+    }
+
+    .left-side {
+      justify-content: center;
+      width: 100%;
+
+      img {
+        height: 530px;
+      }
+
+      .box-shadow {
+        left: auto;
+        height: 530px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .first-section-container .first-section .left-side {
+    justify-content: center;
+    width: 100%;
+
+    img {
+      height: 478px;
+    }
+
+    .box-shadow {
+      left: auto;
+      height: 530px;
+    }
+  }
+
+  .first-section-container .first-section .right-side {
+    display: flex !important;
+    position: relative;
+    left: -37px;
+    top: 30px;
+
+    p {
+      font-size: 36px !important;
+    }
+
+    .name .my-name {
+      font-size: 50px !important;
+    }
+
+    .name .frontend-dev {
+      font-size: 43px !important;
+    }
+
+    .lets-talk-button {
+      right: 38px !important;
+    }
+  }
+}
+
 .social-container {
   position: absolute;
   display: flex;
@@ -116,6 +201,7 @@
     background-color: #9747ff;
     flex-grow: 1;
     border-radius: 4px;
+    min-width: 100px;
   }
 
   .right-line {
@@ -168,6 +254,192 @@
   }
 }
 
+@media (max-width: 1480px) {
+  .vector-background {
+    top: 230px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .vector-background {
+    top: 281px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .vector-background {
+    top: 307px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .vector-background {
+    top: 329px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .vector-background {
+    top: 354px;
+  }
+}
+
+@media (max-width: 950px) {
+  .first-section-container .first-section .right-side .name .lets-talk-button {
+    width: 130px;
+    height: 50px;
+  }
+
+  .social-container .github-linkedin-email p {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .vector-background {
+    top: 326px;
+  }
+}
+
+@media (max-width: 800px) {
+  .vector-background {
+    top: 355px;
+  }
+}
+
+@media (max-width: 701px) {
+  .first-section-container .first-section .left-side img {
+    width: 380px;
+  }
+
+  .first-section-container .first-section .left-side .box-shadow {
+    width: auto;
+  }
+
+  .first-section-container .first-section .right-side .name .my-name {
+    font-size: 45px !important;
+  }
+
+  .first-section-container .first-section .right-side .name .frontend-dev {
+    font-size: 39px !important;
+  }
+
+  .first-section-container .first-section .right-side p {
+    font-size: 30px !important;
+  }
+
+  .first-section-container .first-section .right-side {
+    left: -22px;
+  }
+
+  .first-section-container .first-section .right-side .name .lets-talk-button {
+    margin: 0;
+    right: 25px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .first-section-container .first-section .left-side img {
+    max-width: 320px;
+    height: 390px;
+  }
+
+  .first-section-container .first-section .left-side .box-shadow {
+    max-width: 410px;
+  }
+  .vector-background {
+    top: 315px;
+  }
+}
+
+@media (max-width: 550px) {
+  .first-section-container .first-section .right-side .name .my-name {
+    font-size: 40px !important;
+  }
+
+  .first-section-container .first-section .right-side .name .frontend-dev {
+    font-size: 35px !important;
+  }
+
+  .first-section-container .first-section .right-side p {
+    font-size: 26px !important;
+  }
+
+  .first-section-container .first-section .right-side .name .lets-talk-button {
+    top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .vector-background {
+    top: 342px;
+  }
+
+  .first-section-container .first-section .right-side .name .my-name {
+    font-size: 24px !important;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  .first-section-container .first-section .right-side .name .frontend-dev {
+    font-size: 21px !important;
+  }
+
+  .first-section-container .first-section .right-side p {
+    font-size: 22px !important;
+    left: 10px;
+  }
+
+  .first-section-container .first-section .right-side .name .lets-talk-button {
+    top: 30px;
+    right: 12px !important;
+  }
+
+  .first-section-container .first-section .left-side .box-shadow {
+    max-width: 320px;
+    height: auto;
+  }
+
+  .social-container {
+    top: 85%;
+  }
+}
+
+@media (max-width: 405px) {
+  .social-container .left-line {
+    min-width: 35px;
+  }
+
+  .social-container .github-linkedin-email {
+    padding-right: 0;
+  }
+
+  .first-section-container .first-section {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .vector-background {
+    top: 370px;
+  }
+
+  .first-section-container .first-section .left-side img {
+    width: 295px !important;
+  }
+
+  .first-section-container .first-section .left-side .box-shadow {
+    width: 290px !important;
+    height: 300px;
+  }
+}
+
+@media (max-width: 330px) {
+  .vector-background {
+    top: 395px;
+  }
+}
+
 .scroll-down {
   display: flex;
   position: absolute;
@@ -177,5 +449,46 @@
 
   img {
     animation: moveUpDown 2s infinite;
+  }
+}
+
+@media (max-width: 1480px) {
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .first-section-container .first-section .right-side .name .lets-talk-button {
+    top: 4px;
+    right: 12px !important;
+  }
+
+  .social-container {
+    top: 105%;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
+  .social-container {
+    top: 83%;
+  }
+}
+
+@media only screen and (min-device-width: 390px) and (max-device-width: 844px) and (orientation: portrait) {
+  .social-container {
+    top: 83%;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (orientation: portrait) {
+  .social-container {
+    top: 105%;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) and (orientation: portrait) {
+  .social-container {
+    top: 80%;
   }
 }

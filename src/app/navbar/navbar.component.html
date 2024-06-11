@@ -8,5 +8,13 @@
       <a href="#my-skills" (click)="setActive($event)">Skills</a>
       <a href="#my-portfolio" (click)="setActive($event)">Portfolio</a>
     </div>
+    <div class="burger-menu" (click)="toggleMenu()">
+      &#9776;
+    </div>
+  </div>
+  <div class="dropdown-menu" [ngClass]="{'show': menuOpen}">
+    <a href="#about-me" (click)="setActive($event)">About me</a>
+    <a href="#my-skills" (click)="setActive($event)">Skills</a>
+    <a href="#my-portfolio" (click)="setActive($event)">Portfolio</a>
   </div>
 </div>

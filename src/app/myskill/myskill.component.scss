@@ -5,8 +5,8 @@
   width: 100%;
   background-color: #141d2f;
   padding-top: 120px;
-  position: relative; /* Um die absolute Positionierung von .green-shadow zu ermöglichen */
-  overflow: hidden; /* Um sicherzustellen, dass keine überlaufenden Inhalte angezeigt werden */
+  position: relative;
+  overflow: hidden;
 
   .my-skill-section {
     width: 1440px;
@@ -63,16 +63,146 @@
 
   .green-shadow {
     position: absolute;
-    top: 100px; /* Setze top auf 0, wenn das Bild am oberen Rand beginnen soll */
-    left: 0; /* Bild am linken Rand des Containers positionieren */
-    height: 100%; /* Volle Höhe des Containers */
+    top: 100px;
+    left: 0;
+    height: 100%;
     z-index: 1;
 
     img {
       height: 100%;
-      width: auto; /* Behalte das Seitenverhältnis bei */
+      width: auto;
       object-fit: contain;
       position: absolute;
     }
+  }
+}
+
+@media (max-width: 950px) {
+  .my-skill-container .my-skill-section .right-side .my-skills-container {
+    margin-right: 0;
+  }
+  .my-skill-container .my-skill-section {
+    display: flex;
+    flex-direction: column;
+
+    .left-side,
+    .right-side {
+      width: 100%;
+    }
+
+    .right-side {
+      order: 1;
+      display: block;
+
+      .my-skills-container .my-skills p {
+        font-size: 65px;
+      }
+    }
+
+    .left-side {
+      order: 2;
+      margin-top: -160px;
+      padding-bottom: 100px;
+
+      .img-container {
+        justify-items: center;
+      }
+    }
+  }
+
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container
+    .lets-talk-button {
+    position: relative;
+    top: 570px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container
+    .lets-talk-button:hover {
+    transform: translateX(-50%) scale(1.1); /* Slightly enlarge button on hover */
+  }
+
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container {
+    display: block;
+  }
+}
+
+@media (max-width: 853px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container
+    .lets-talk-button {
+    position: relative;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 590px) {
+  .my-skill-container .my-skill-section .left-side .img-container {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container
+    .lets-talk-button {
+    position: relative;
+    top: 610px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 464px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .info-box-and-button-container
+    .lets-talk-button {
+    position: relative;
+    top: 710px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 590px) {
+  .my-skill-container .my-skill-section .left-side .img-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .my-skill-container .green-shadow {
+    left: -130px;
+  }
+}
+
+@media (max-width: 400px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    p {
+    font-size: 45px;
   }
 }
