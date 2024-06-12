@@ -57,6 +57,7 @@
     .right-side {
       display: flex;
       align-items: center;
+      z-index: 4;
 
       p {
         transform: rotate(270deg);

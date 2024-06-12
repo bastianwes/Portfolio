@@ -91,7 +91,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #141d2f;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -102,4 +102,17 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #5db814;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
