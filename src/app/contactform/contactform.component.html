@@ -50,7 +50,8 @@
               [ngClass]="{ 'is-invalid': contactForm.submitted && acceptTerms.errors }" />
 
             <label for="acceptTerms" [class.invalid]="!acceptTerms.valid && acceptTerms.touched">
-              I've read the <span class="privacy-policy">privacy policy</span> and agree to the processing of my data as
+              I've read the <span class="privacy-policy"><a [routerLink]="['/privacy']">privacy policy</a></span> and
+              agree to the processing of my data as
               outlined.
             </label>
             @if (!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)) {
@@ -69,10 +70,7 @@
         </div>
       </div>
 
-      <div>
-        <p><a [routerLink]="['/privacy']">Private</a>
-        </p>
-      </div>
+
 
 
 
