@@ -234,6 +234,16 @@
 
         .privacy-policy {
           color: #9747ff;
+
+          a {
+            text-decoration: none; /* Entfernt die Linie unter dem Link */
+            transition: color 0.3s ease;
+            color: inherit; /* Vererbt die Farbe der Elternklasse */
+          }
+
+          a:hover {
+            color: #5403bd; /* Farbe beim Hover bleibt dieselbe */
+          }
         }
       }
     }
