@@ -1,15 +1,30 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnDestroy {
+export class NavbarComponent implements OnInit {
   menuOpen = false;
+  lang: string = '';
+
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit(): void {
+    this.lang = localStorage.getItem('lang') || 'en';
+    this.translateService.use(this.lang);
+  }
+
+  changeLang(lang: any) {
+    const selectedLanguage = lang.target.value;
+    localStorage.setItem('lang', selectedLanguage);
+    this.translateService.use(selectedLanguage);
+  }
 
   setActive(event: Event) {
     let links = document.querySelectorAll('.right-side a, .dropdown-menu a');

@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,15 @@ import { PrivacyComponent } from './privacy/privacy.component';
     ImpressumComponent,
     PrivacyComponent,
   ],
+  providers: [TranslateService], // <-- Hinzugefügt
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  constructor(private translateService: TranslateService) {
+    this.translateService.setDefaultLang('en');
+    this.translateService.use(localStorage.getItem('lang') || 'en');
+  }
+
   title = 'portfolio';
 }

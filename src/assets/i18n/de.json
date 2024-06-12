@@ -1,8 +1,4 @@
 {
-  "header": {
-    "aboutMe": "Über mich",
-    "skills": "Skills",
-    "portfolio": "Portfolio",
-    "contact": "Kontakt"
-  }
+  "aboutMe": "Über mich",
+  "contact": "Kontakt"
 }

@@ -4,11 +4,11 @@
       <p class="fontPoppins">Bastian</p>
     </div>
     <div class="right-side">
-      <a href="#about-me" (click)="setActive($event)">About me</a>
+      <a href="#about-me" (click)="setActive($event)">{{'aboutMe' | translate}}</a>
       <a href="#my-skills" (click)="setActive($event)">Skills</a>
       <a href="#my-portfolio" (click)="setActive($event)">Portfolio</a>
       <div class="form-select">
-        <select id="language-select">
+        <select class="form-select" (change)="changeLang($event)" name="" id="" [value]="lang">
           <option value="en">English</option>
           <option value="de">German</option>
         </select>
@@ -23,7 +23,7 @@
     <a href="#my-skills" (click)="setActive($event)">Skills</a>
     <a href="#my-portfolio" (click)="setActive($event)">Portfolio</a>
     <div class="form-select">
-      <select id="language-select">
+      <select id="language-select" [value]="lang" (change)="changeLang($event)">
         <option value="en">English</option>
         <option value="de">German</option>
       </select>
