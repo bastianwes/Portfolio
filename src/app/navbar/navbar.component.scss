@@ -20,6 +20,7 @@
     list-style-type: none;
     display: flex;
     gap: 29px;
+    align-items: center;
 
     a {
       transition: color 0.3s ease;
@@ -89,4 +90,28 @@
   &.show {
     display: flex;
   }
+}
+
+.form-select {
+  width: 100px;
+  margin: 0 auto;
+  font-family: "Poppins";
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #1f1e1e;
+  background-color: #5a5959;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+}
+
+option {
+  text-align: center;
 }
