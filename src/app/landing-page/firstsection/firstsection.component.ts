@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-firstsection',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './firstsection.component.html',
   styleUrl: './firstsection.component.scss',
 })

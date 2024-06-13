@@ -1,7 +1,7 @@
 <div class="contact-headline-container" id="my-contact">
   <div class="left-line hidden"></div>
   <div class="contact-headline">
-    <h1 class="hidden">Contact</h1>
+    <h1 class="hidden">{{'contact' | translate}}</h1>
   </div>
   <div class="right-line">
   </div>
@@ -11,36 +11,35 @@
 <div class="contact-container">
   <div class="contact-wrapper">
     <div class="left-side">
-      <h3>Got a problem to solve?</h3>
-      <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your
-        projects
-        with my work.</p>
-      <p>Need a Frontend developer? <b>Contact me!</b></p>
+      <h3>{{'contactHeader' | translate}}</h3>
+      <p>{{'contactText' | translate}}</p>
+      <p>{{'contactMe' | translate}}<b>{{'contactMeText' | translate}}</b></p>
     </div>
     <div class="right-side">
       <div class="contact-form">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
           <div class="input-group" [class.invalid]="!name.valid && name.touched">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-              placeholder="Your name" required autocomplete="off">
+              placeholder="{{'yourName' | translate}}" required autocomplete="off">
             @if (!name.valid && name.touched) {
-            <span class="error-message">Please enter your name</span>
+            <span class="error-message">{{'yourNameValid' | translate}}</span>
             }
           </div>
 
           <div class="input-group" [class.invalid]="!email.valid && email.touched">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-              placeholder="Your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" autocomplete="off">
+              placeholder="{{'yourMail' | translate}}" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              autocomplete="off">
             @if (!email.valid && email.touched) {
-            <span class="error-message">Please enter a valid email</span>
+            <span class="error-message">{{'yourMailValid' | translate}}</span>
             }
           </div>
 
           <div class="input-group" [class.invalid]="!message.valid && message.touched">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-              placeholder="Your message" style="height:200px" required autocomplete="off"></textarea>
+              placeholder="{{'yourMessage' | translate}}" style="height:200px" required autocomplete="off"></textarea>
             @if (!message.valid && message.touched) {
-            <span class="error-message">Please enter a message</span>
+            <span class="error-message">{{'yourMessageValid' | translate}}</span>
             }
           </div>
 
@@ -50,15 +49,21 @@
               [ngClass]="{ 'is-invalid': contactForm.submitted && acceptTerms.errors }" />
 
             <label for="acceptTerms" [class.invalid]="!acceptTerms.valid && acceptTerms.touched">
-              I've read the <span class="privacy-policy"><a [routerLink]="['/privacy']">privacy policy</a></span> and
-              agree to the processing of my data as
-              outlined.
+              <p>
+                <span>{{ 'policy' | translate }}</span>
+                <span class="privacy-policy">
+                  <a [routerLink]="['/privacy']">{{ 'privacyPolicyLinkText' | translate }}</a>
+                </span>
+                {{ 'andAgreeToTheProcessing' | translate }}
+              </p>
             </label>
             @if (!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)) {
-            <span class="error-message">Accept Terms is required</span>
+            <span class="error-message">{{ 'policyValid' | translate }}</span>
             }
+
           </div>
-          <input type="submit" value="Send message" class="custom-submit" [disabled]="!contactForm.valid">
+          <input type="submit" value="{{ 'sendMessage' | translate }}" class="custom-submit"
+            [disabled]="!contactForm.valid">
         </form>
         <div class="go-up-button" (click)="goUp()">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">

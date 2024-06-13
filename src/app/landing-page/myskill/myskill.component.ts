@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-myskill',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './myskill.component.html',
   styleUrl: './myskill.component.scss',
 })

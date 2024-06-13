@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit {
   changeLang(lang: any) {
     const selectedLanguage = lang.target.value;
     localStorage.setItem('lang', selectedLanguage);
+    this.lang = selectedLanguage;
     this.translateService.use(selectedLanguage);
   }
 
@@ -49,7 +50,10 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    // Cleanup the event listener when the component is destroyed
     window.removeEventListener('resize', this.onResize);
+  }
+
+  getFontClass() {
+    return this.lang === 'de' ? 'font-de' : 'font-en';
   }
 }

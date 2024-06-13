@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfoliosection',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './portfoliosection.component.html',
   styleUrl: './portfoliosection.component.scss',
 })
