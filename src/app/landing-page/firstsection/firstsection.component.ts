@@ -1,14 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-firstsection',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './firstsection.component.html',
   styleUrl: './firstsection.component.scss',
 })
-export class FirstsectionComponent {
+export class FirstsectionComponent implements OnInit {
+  lang: string = 'en'; // Standardmäßig 'en'
+
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit() {
+    this.lang = localStorage.getItem('lang') || 'en';
+    this.translateService.use(this.lang);
+  }
+
   handleClick() {
     let element = document.getElementById('my-contact');
     if (element) {
@@ -32,5 +43,9 @@ export class FirstsectionComponent {
       'https://www.linkedin.com/in/bastian-weschasit-956a08312/',
       '_blank'
     );
+  }
+
+  getFontClass() {
+    return this.lang === 'de' ? 'font-de' : 'font-en';
   }
 }

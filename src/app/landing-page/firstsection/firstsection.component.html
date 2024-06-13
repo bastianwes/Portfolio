@@ -9,7 +9,10 @@
       <div class="name">
         <span class="my-name">Bastian Weschasit</span>
         <span class="frontend-dev">FRONTEND DEVELOPER</span>
-        <button class="lets-talk-button" (click)="handleClick()">{{'letsTalk' | translate}}</button>
+        <button class="lets-talk-button" [ngStyle]="{'font-size': lang === 'de' ? '23px' : '50px'}"
+          (click)="handleClick()">
+          {{'letsTalk' | translate}}
+        </button>
       </div>
     </div>
   </div>
@@ -25,8 +28,7 @@
       <p>bastianwe&#64;gmx.net</p>
     </div>
   </div>
-  <div class=" right-line">
-  </div>
+  <div class="right-line"></div>
 </div>
 
 <div class="scroll-down">

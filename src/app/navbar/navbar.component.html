@@ -4,8 +4,11 @@
       <p class="fontPoppins">Bastian</p>
     </div>
     <div class="right-side">
-      <a href="#about-me" (click)="setActive($event)">{{'aboutMe' | translate}}</a>
+      <a href="#about-me" (click)="setActive($event)"
+        [ngStyle]="{'font-size': lang === 'de' ? '13px' : '30px'}">{{'aboutMe'|translate}}
+      </a>
       <a href="#my-skills" (click)="setActive($event)">Skills</a>
+
       <a href="#my-portfolio" (click)="setActive($event)">Portfolio</a>
       <div class="form-select">
         <select class="form-select" (change)="changeLang($event)" name="" id="" [value]="lang">

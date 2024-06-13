@@ -35,7 +35,7 @@ export class NavbarComponent implements OnInit {
     });
 
     (event.target as HTMLElement).classList.add('active');
-    this.menuOpen = false; // Close menu after clicking
+    this.menuOpen = false;
   }
 
   toggleMenu() {
@@ -51,9 +51,5 @@ export class NavbarComponent implements OnInit {
 
   ngOnDestroy() {
     window.removeEventListener('resize', this.onResize);
-  }
-
-  getFontClass() {
-    return this.lang === 'de' ? 'font-de' : 'font-en';
   }
 }
