@@ -80,4 +80,17 @@ export class ContactformComponent implements OnInit {
   goUp() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  showPopup() {
+    var popup = document.getElementById('popup');
+    if (popup) {
+      popup.style.display = 'block';
+
+      setTimeout(function () {
+        if (popup) {
+          popup.style.display = 'none';
+        }
+      }, 3000);
+    }
+  }
 }

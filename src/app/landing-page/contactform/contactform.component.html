@@ -47,20 +47,24 @@
               [ngClass]="{ 'is-invalid': contactForm.submitted && acceptTerms.errors }" />
 
             <label for="acceptTerms" [class.invalid]="!acceptTerms.valid && acceptTerms.touched">
-              <p>
+              <span>
                 <span>{{ 'policy' | translate }}</span>
                 <span class="privacy-policy">
                   <a [routerLink]="['/privacy']">{{ 'privacyPolicyLinkText' | translate }}</a>
                 </span>
                 {{ 'andAgreeToTheProcessing' | translate }}
-              </p>
+              </span>
             </label>
             <span *ngIf="!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)" class="error-message"
               [ngClass]="{ 'error-message-de-terms': germanIsSelected }">{{ 'policyValid' | translate }}</span>
           </div>
 
+          <div id="popup" class="popup">
+            <p>{{ 'popupMessage' | translate }}</p>
+          </div>
+
           <input type="submit" value="{{ 'sendMessage' | translate }}" class="custom-submit"
-            [disabled]="!contactForm.valid" />
+            [disabled]="!contactForm.valid" (click)="showPopup()" />
         </form>
 
         <div class="go-up-button" (click)="goUp()">
