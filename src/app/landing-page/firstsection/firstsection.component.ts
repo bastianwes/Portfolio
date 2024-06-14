@@ -11,13 +11,20 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './firstsection.component.scss',
 })
 export class FirstsectionComponent implements OnInit {
-  lang: string = 'en'; // Standardmäßig 'en'
+  lang: string = '';
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
     this.lang = localStorage.getItem('lang') || 'en';
     this.translateService.use(this.lang);
+  }
+
+  changeLang(lang: any) {
+    const selectedLanguage = lang.target.value;
+    localStorage.setItem('lang', selectedLanguage);
+    this.lang = selectedLanguage;
+    this.translateService.use(selectedLanguage);
   }
 
   handleClick() {
@@ -45,7 +52,14 @@ export class FirstsectionComponent implements OnInit {
     );
   }
 
-  getFontClass() {
-    return this.lang === 'de' ? 'font-de' : 'font-en';
+  getFontSize(lang: string) {
+    switch (lang) {
+      case 'en':
+        return '20px';
+      case 'de':
+        return '40px';
+      default:
+        return '20px';
+    }
   }
 }

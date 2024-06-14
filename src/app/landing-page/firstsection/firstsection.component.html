@@ -9,8 +9,7 @@
       <div class="name">
         <span class="my-name">Bastian Weschasit</span>
         <span class="frontend-dev">FRONTEND DEVELOPER</span>
-        <button class="lets-talk-button" [ngStyle]="{'font-size': lang === 'de' ? '23px' : '50px'}"
-          (click)="handleClick()">
+        <button class="lets-talk-button" [ngStyle]="{'font-size': getFontSize(lang)}" (click)="handleClick()">
           {{'letsTalk' | translate}}
         </button>
       </div>
