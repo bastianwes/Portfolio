@@ -9,6 +9,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './portfoliosection.component.scss',
 })
 export class PortfoliosectionComponent {
+  openJoin() {
+    window.open('https://join.bastian-weschasit.de/', '_blank');
+  }
+
   openGame() {
     window.open('https://el-pollo-loco.bastian-weschasit.de/', '_blank');
   }
