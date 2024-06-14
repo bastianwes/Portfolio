@@ -13,34 +13,32 @@
     <div class="left-side">
       <h3>{{'contactHeader' | translate}}</h3>
       <p>{{'contactText' | translate}}</p>
-      <p>{{'contactMe' | translate}}<b>{{'contactMeText' | translate}}</b></p>
+      <p>{{'contactMe' | translate}}<span>&nbsp;</span><b>{{'contactMeText' | translate}}</b></p>
     </div>
     <div class="right-side">
       <div class="contact-form">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
           <div class="input-group" [class.invalid]="!name.valid && name.touched">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-              placeholder="{{'yourName' | translate}}" required autocomplete="off">
-            @if (!name.valid && name.touched) {
-            <span class="error-message">{{'yourNameValid' | translate}}</span>
-            }
+              placeholder="{{ 'yourName' | translate }}" required autocomplete="off" />
+            <span *ngIf="!name.valid && name.touched" class="error-message"
+              [ngClass]="{ 'error-message-de': germanIsSelected }">{{ 'yourNameValid' | translate }}</span>
           </div>
 
           <div class="input-group" [class.invalid]="!email.valid && email.touched">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-              placeholder="{{'yourMail' | translate}}" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              autocomplete="off">
-            @if (!email.valid && email.touched) {
-            <span class="error-message">{{'yourMailValid' | translate}}</span>
-            }
+              placeholder="{{ 'yourMail' | translate }}" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              autocomplete="off" />
+            <span *ngIf="!email.valid && email.touched" class="error-message"
+              [ngClass]="{ 'error-message-de': germanIsSelected }">{{ 'yourMailValid' | translate }}</span>
           </div>
 
           <div class="input-group" [class.invalid]="!message.valid && message.touched">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-              placeholder="{{'yourMessage' | translate}}" style="height:200px" required autocomplete="off"></textarea>
-            @if (!message.valid && message.touched) {
-            <span class="error-message">{{'yourMessageValid' | translate}}</span>
-            }
+              placeholder="{{ 'yourMessage' | translate }}" style="height: 200px" required
+              autocomplete="off"></textarea>
+            <span *ngIf="!message.valid && message.touched" class="error-message"
+              [ngClass]="{ 'error-message-de': germanIsSelected }">{{ 'yourMessageValid' | translate }}</span>
           </div>
 
           <div class="form-group form-check">
@@ -57,14 +55,14 @@
                 {{ 'andAgreeToTheProcessing' | translate }}
               </p>
             </label>
-            @if (!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)) {
-            <span class="error-message">{{ 'policyValid' | translate }}</span>
-            }
-
+            <span *ngIf="!acceptTerms.valid && (acceptTerms.touched || contactForm.submitted)" class="error-message"
+              [ngClass]="{ 'error-message-de-terms': germanIsSelected }">{{ 'policyValid' | translate }}</span>
           </div>
+
           <input type="submit" value="{{ 'sendMessage' | translate }}" class="custom-submit"
-            [disabled]="!contactForm.valid">
+            [disabled]="!contactForm.valid" />
         </form>
+
         <div class="go-up-button" (click)="goUp()">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="currentColor" stroke-width="2" />

@@ -17,13 +17,14 @@
     <div class="right-side">
       <div class="my-skills-container">
         <div class="my-skills hidden">
-          <p>{{'mySkills' | translate}}</p>
+          <p [ngClass]="{'mySkillsDe': germanIsSelected}">{{'mySkills' | translate}}</p>
         </div>
         <div class="info-box-and-button-container">
           <div class="my-skills-info">
             <p>{{'mySkillsInfo' | translate}}</p>
           </div>
-          <button class="lets-talk-button" (click)="handleClick()">{{'GetInTouch' | translate}}</button>
+          <button class="lets-talk-button" [ngClass]="{'lets-talk-button-de': germanIsSelected}"
+            (click)="handleClick()">{{'GetInTouch' | translate}}</button>
         </div>
       </div>
     </div>

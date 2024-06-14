@@ -3,7 +3,7 @@
     <div class="about-me-section">
         <div class="left-side">
             <div class="about-me">
-                <h1 class="hidden">{{'aboutMe' | translate}}</h1>
+                <h1 class="hidden" [ngClass]="{'aboutMeDe': germanIsSelected}">{{'aboutMe' | translate}}</h1>
                 <p>{{'aboutMeText' | translate}}</p>
                 <div class="personal-info">
                     <div class="left-side-img">

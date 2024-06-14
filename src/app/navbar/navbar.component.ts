@@ -52,15 +52,4 @@ export class NavbarComponent implements OnInit {
   ngOnDestroy() {
     window.removeEventListener('resize', this.onResize);
   }
-
-  getFontSize(lang: string) {
-    switch (lang) {
-      case 'en':
-        return '20px';
-      case 'de':
-        return '40px';
-      default:
-        return '20px';
-    }
-  }
 }

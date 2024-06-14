@@ -101,6 +101,15 @@
   }
 }
 
+.first-section-container .first-section .right-side .IamDe {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.first-section-container .first-section .right-side .name .lets-talk-button-de {
+  width: 225px;
+}
+
 @media (max-width: 1480px) {
   .first-section-container .first-section {
     display: block;
@@ -127,6 +136,10 @@
       .name .lets-talk-button {
         right: 50px;
         margin-top: -5px;
+      }
+
+      .IamDe {
+        font-size: 30px;
       }
     }
 
@@ -181,6 +194,14 @@
 
     .lets-talk-button {
       right: 38px !important;
+    }
+
+    .IamDe {
+      font-size: 30px !important;
+    }
+
+    .lets-talk-button-de {
+      width: 225px !important;
     }
   }
 }
@@ -336,6 +357,18 @@
   .first-section-container .first-section .right-side .name .lets-talk-button {
     margin: 0;
     right: 25px !important;
+  }
+
+  .first-section-container .first-section .right-side .IamDe {
+    font-size: 19px !important; /* Ensure this size is applied */
+  }
+
+  .first-section-container
+    .first-section
+    .right-side
+    .name
+    .lets-talk-button-de {
+    width: 225px !important; /* Ensure this width is applied */
   }
 }
 

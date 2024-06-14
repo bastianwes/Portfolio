@@ -195,6 +195,43 @@
         bottom: -1.7em;
         left: 0;
       }
+      @media (max-width: 650px) {
+        .error-message-de {
+          color: red;
+          font-size: 12px;
+          margin-top: 0.25em;
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+        }
+        .error-message-de-terms {
+          color: red;
+          font-size: 12px;
+          margin-top: 0.25em;
+          position: absolute;
+          bottom: -35px;
+          left: 0;
+        }
+      }
+
+      @media (max-width: 350px) {
+        .error-message-de {
+          color: red;
+          font-size: 11px;
+          margin-top: 0.25em;
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+        }
+        .error-message-de-terms {
+          color: red;
+          font-size: 12px;
+          margin-top: 0.25em;
+          position: absolute;
+          bottom: -35px;
+          left: 0;
+        }
+      }
 
       .input-group.invalid .error-message {
         display: block;
@@ -278,7 +315,7 @@
       width: 90%;
 
       .contact-form {
-        width: 90%;
+        width: 91%;
       }
     }
   }

@@ -41,7 +41,7 @@
         }
 
         h1 {
-          font-size: 80px;
+          font-size: 90px;
           font-weight: 700;
         }
 
@@ -85,6 +85,10 @@
   }
 }
 
+.about-me-container .about-me-section .left-side .about-me h1.aboutMeDe {
+  font-size: 80px;
+}
+
 @media (max-width: 1480px) {
   .about-me-container .about-me-section {
     display: flex; /* Ensure this is what you want */
@@ -96,6 +100,10 @@
         font-size: 65px;
       }
     }
+  }
+
+  .about-me-container .about-me-section .left-side .about-me h1.aboutMeDe {
+    font-size: 60px;
   }
 
   .about-me-container .about-me-section .right-side .image-container-face {
@@ -150,5 +158,9 @@
     .about-me-section .left-side .about-me h1 {
       font-size: 45px;
     }
+  }
+
+  .about-me-container .about-me-section .left-side .about-me h1.aboutMeDe {
+    font-size: 45px;
   }
 }

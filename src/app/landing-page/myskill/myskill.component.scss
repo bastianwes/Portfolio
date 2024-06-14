@@ -77,6 +77,80 @@
   }
 }
 
+.my-skill-container
+  .my-skill-section
+  .right-side
+  .my-skills-container
+  .my-skills
+  .mySkillsDe {
+  font-size: 65px;
+}
+
+.my-skill-container
+  .my-skill-section
+  .right-side
+  .my-skills-container
+  .info-box-and-button-container
+  .lets-talk-button-de {
+  width: 217px;
+  font-size: 18px;
+}
+
+@media (max-width: 1450px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    .mySkillsDe {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    .mySkillsDe {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    .mySkillsDe {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 950px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    .mySkillsDe {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .my-skill-container
+    .my-skill-section
+    .right-side
+    .my-skills-container
+    .my-skills
+    .mySkillsDe {
+    font-size: 45px;
+  }
+}
+
 @media (max-width: 950px) {
   .my-skill-container .my-skill-section .right-side .my-skills-container {
     margin-right: 0;

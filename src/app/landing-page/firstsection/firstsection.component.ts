@@ -8,23 +8,29 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './firstsection.component.html',
-  styleUrl: './firstsection.component.scss',
+  styleUrls: ['./firstsection.component.scss'],
 })
 export class FirstsectionComponent implements OnInit {
   lang: string = '';
+  germanIsSelected: boolean = false;
 
   constructor(private translateService: TranslateService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en';
+    this.germanIsSelected = this.lang === 'de';
     this.translateService.use(this.lang);
+    this.translateService.onLangChange.subscribe((event) => {
+      this.lang = event.lang;
+      this.germanIsSelected = this.lang === 'de';
+    });
   }
 
   changeLang(lang: any) {
     const selectedLanguage = lang.target.value;
     localStorage.setItem('lang', selectedLanguage);
-    this.lang = selectedLanguage;
     this.translateService.use(selectedLanguage);
+    this.germanIsSelected = selectedLanguage === 'de';
   }
 
   handleClick() {
@@ -50,16 +56,5 @@ export class FirstsectionComponent implements OnInit {
       'https://www.linkedin.com/in/bastian-weschasit-956a08312/',
       '_blank'
     );
-  }
-
-  getFontSize(lang: string) {
-    switch (lang) {
-      case 'en':
-        return '20px';
-      case 'de':
-        return '40px';
-      default:
-        return '20px';
-    }
   }
 }
