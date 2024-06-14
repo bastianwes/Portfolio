@@ -1,22 +1,25 @@
 <div class="footer-container">
-  <div class="footer-and-impressum">
-    <div class="footer-wrapper">
-      <div class="name">
-        <h3 class="fontPoppins">Bas<span class="styled-letter">t</span>ia<span class="styled-letter">n</span></h3>
-      </div>
-      <div class="my-name">
-        <span>&copy; Bastian Weschasit 2024</span>
-      </div>
-      <div class="github-linkedin-email">
-        <div class="social-png">
-          <img src="assets/img/github.png" alt="" (click)="openGithub()">
-          <img src="assets/img/mail.png" alt="" (click)="getToContact()">
-          <img src="assets/img/linkedin.png" alt="" (click)="openLinkedIn()">
-        </div>
-      </div>
-    </div>
-    <div class="impressum">
-      <p><a [routerLink]="['/impressum']">{{ 'imprint' | translate }}</a></p>
-    </div>
-  </div>
+	<div class="footer-and-impressum">
+		<div class="footer-wrapper">
+			<div class="name">
+				<h3 class="fontPoppins">Bas<span class="styled-letter">t</span>ia<span class="styled-letter">n</span>
+				</h3>
+			</div>
+			<div class="my-name">
+				<span>&copy; Bastian Weschasit 2024</span>
+			</div>
+			<div class="github-linkedin-email">
+				<div class="social-png">
+					<img src="assets/img/github.png" alt="" (click)="openGithub()">
+					<img src="assets/img/mail.png" alt="" (click)="getToContact()">
+					<img src="assets/img/linkedin.png" alt="" (click)="openLinkedIn()">
+				</div>
+			</div>
+		</div>
+		<div class="impressum">
+			<p>
+				<a [routerLink]="['/impressum']">{{ 'imprint' | translate }}</a>
+			</p>
+		</div>
+	</div>
 </div>

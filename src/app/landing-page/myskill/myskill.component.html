@@ -1,35 +1,41 @@
 <div class="my-skill-container" id="my-skills">
-  <div class="my-skill-section">
-    <div class="left-side">
-      <div class="img-container">
-        <img src="assets/img/angular.svg" alt="">
-        <img src="assets/img/ts.svg" alt="">
-        <img src="assets/img/js.svg" alt="">
-        <img src="assets/img/html.svg" alt="">
-        <img src="assets/img/firebase.svg" alt="">
-        <img src="assets/img/git.svg" alt="">
-        <img src="assets/img/css.svg" alt="">
-        <img src="assets/img/api.svg" alt="">
-        <img src="assets/img/scrum.svg" alt="">
-        <img src="assets/img/materialdesign.svg" alt="">
-      </div>
-    </div>
-    <div class="right-side">
-      <div class="my-skills-container">
-        <div class="my-skills hidden">
-          <p [ngClass]="{'mySkillsDe': germanIsSelected}">{{'mySkills' | translate}}</p>
+    <div class="my-skill-section">
+        <div class="left-side">
+            <div class="img-container">
+                <img src="assets/img/angular.svg" alt="">
+                <img src="assets/img/ts.svg" alt="">
+                <img src="assets/img/js.svg" alt="">
+                <img src="assets/img/html.svg" alt="">
+                <img src="assets/img/firebase.svg" alt="">
+                <img src="assets/img/git.svg" alt="">
+                <img src="assets/img/css.svg" alt="">
+                <img src="assets/img/api.svg" alt="">
+                <img src="assets/img/scrum.svg" alt="">
+                <img src="assets/img/materialdesign.svg" alt="">
+            </div>
         </div>
-        <div class="info-box-and-button-container">
-          <div class="my-skills-info">
-            <p>{{'mySkillsInfo' | translate}}</p>
-          </div>
-          <button class="lets-talk-button" [ngClass]="{'lets-talk-button-de': germanIsSelected}"
-            (click)="handleClick()">{{'GetInTouch' | translate}}</button>
+        <div class="right-side">
+            <div class="my-skills-container">
+                <div class="my-skills hidden">
+                    <p [ngClass]="{'mySkillsDe': germanIsSelected}">
+                        {{'mySkills' | translate}}
+                    </p>
+                </div>
+                <div class="info-box-and-button-container">
+                    <div class="my-skills-info">
+                        <p>
+                            {{'mySkillsInfo' | translate}}
+                        </p>
+                    </div>
+                    <button class="lets-talk-button" [ngClass]="{'lets-talk-button-de': germanIsSelected}"
+                        (click)="handleClick()">
+                        {{'GetInTouch' | translate}}
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="green-shadow">
-    <img src="assets/img/green-shadow.svg" alt="">
-  </div>
+    <div class="green-shadow">
+        <img src="assets/img/green-shadow.svg" alt="">
+    </div>
 </div>

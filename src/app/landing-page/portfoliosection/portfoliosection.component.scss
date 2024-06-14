@@ -5,7 +5,7 @@
   justify-content: center;
   padding-top: 100px;
   background-color: #141d2f;
-  position: relative; /* Um die absolute Positionierung von .purple-shadow zu ermöglichen */
+  position: relative;
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@
   width: 100%;
   padding-top: 150px;
   background-color: #141d2f;
-  position: relative; /* Um die absolute Positionierung von .purple-shadow-big zu ermöglichen */
+  position: relative;
   overflow: hidden;
   min-height: 100vh;
 
@@ -152,8 +152,8 @@
     top: 661px;
     left: 0;
     z-index: 1;
-    height: 748.73px; /* Feste Höhe */
-    width: 650px; /* Feste Breite */
+    height: 748.73px;
+    width: 650px;
   }
 
   .purple-shadow-big img {
@@ -182,7 +182,7 @@
       gap: 0;
 
       .right-side {
-        text-align: center; /* Text-Inhalt zentrieren */
+        text-align: center;
         margin-top: -40px;
         width: 70%;
 
@@ -243,7 +243,7 @@
     }
 
     .right-side {
-      width: 90%; /* Stellen Sie sicher, dass die Breite hier 90% beträgt */
+      width: 90%;
     }
   }
 
@@ -259,7 +259,7 @@
 
   .portfolio-container .portfolio-wrapper-join .right-side,
   .portfolio-container .portfolio-wrapper-el-pollo-loco .right-side {
-    width: 90%; /* Ändern Sie die Breite auf 100%, um kleinere Bildschirmgrößen zu unterstützen */
+    width: 90%;
     padding: 0 20px;
   }
 }

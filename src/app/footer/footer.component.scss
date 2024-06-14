@@ -56,12 +56,12 @@
       cursor: pointer;
 
       a {
-        text-decoration: none; /* Entfernt die Linie unter dem Link */
+        text-decoration: none;
         transition: color 0.3s ease;
       }
 
       a:hover {
-        color: #5403bd; /* Farbe beim Hover ändern */
+        color: #5403bd;
       }
     }
   }

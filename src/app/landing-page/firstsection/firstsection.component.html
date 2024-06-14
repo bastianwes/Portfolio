@@ -1,40 +1,48 @@
 <div class="first-section-container">
-  <div class="first-section">
-    <div class="left-side">
-      <img class="box-shadow" src="assets/img/photo shadows.svg" alt="Shadow">
-      <img src="assets/img/beispielbild.png" alt="IMAGE">
+    <div class="first-section">
+        <div class="left-side">
+            <img class="box-shadow" src="assets/img/photo shadows.svg" alt="Shadow">
+            <img src="assets/img/beispielbild.png" alt="IMAGE">
+        </div>
+        <div class="right-side">
+            <p [ngClass]="{ 'IamDe': germanIsSelected }">
+                {{'Iam' | translate}}
+            </p>
+            <div class="name">
+                <span class="my-name">
+                    Bastian Weschasit
+                </span>
+                <span class="frontend-dev">
+                    FRONTEND DEVELOPER
+                </span>
+                <button class="lets-talk-button" [ngClass]="{ 'lets-talk-button-de': germanIsSelected }"
+                    (click)="handleClick()">
+                    {{'letsTalk' | translate}}
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="right-side">
-      <p [ngClass]="{ 'IamDe': germanIsSelected }">{{'Iam' | translate}}</p>
-      <div class="name">
-        <span class="my-name">Bastian Weschasit</span>
-        <span class="frontend-dev">FRONTEND DEVELOPER</span>
-        <button class="lets-talk-button" [ngClass]="{ 'lets-talk-button-de': germanIsSelected }"
-          (click)="handleClick()">
-          {{'letsTalk' | translate}}
-        </button>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="social-container">
-  <div class="left-line"></div>
-  <div class="github-linkedin-email">
-    <div class="social-png">
-      <img src="assets/img/github.png" alt="" (click)="openGithub()">
-      <img src="assets/img/mail.png" alt="" (click)="getToContact()">
-      <img src="assets/img/linkedin.png" alt="" (click)="openLinkedIn()">
-      <p>bastianwe&#64;gmx.net</p>
+    <div class="left-line"></div>
+    <div class="github-linkedin-email">
+        <div class="social-png">
+            <img src="assets/img/github.png" alt="" (click)="openGithub()">
+            <img src="assets/img/mail.png" alt="" (click)="getToContact()">
+            <img src="assets/img/linkedin.png" alt="" (click)="openLinkedIn()">
+            <p>
+                bastianwe&#64;gmx.net
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="right-line"></div>
+    <div class="right-line"></div>
 </div>
 
 <div class="scroll-down">
-  <img src="assets/img/Scroll down.png" alt="">
+    <img src="assets/img/Scroll down.png" alt="">
 </div>
 
 <div class="vector-background">
-  <img src="assets/img/vector2.svg" alt="">
+    <img src="assets/img/vector2.svg" alt="">
 </div>

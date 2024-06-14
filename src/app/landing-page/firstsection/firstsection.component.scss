@@ -116,7 +116,7 @@
 
     .right-side {
       justify-content: center;
-      position: relative; /* Make it relatively positioned */
+      position: relative;
       left: -38px;
 
       p {
@@ -129,7 +129,7 @@
       }
 
       .name .frontend-dev {
-        letter-spacing: 0 !important; /* Verwenden Sie !important, wenn es notwendig ist */
+        letter-spacing: 0 !important;
         font-size: 52px !important;
       }
 
@@ -360,7 +360,7 @@
   }
 
   .first-section-container .first-section .right-side .IamDe {
-    font-size: 19px !important; /* Ensure this size is applied */
+    font-size: 19px !important;
   }
 
   .first-section-container
@@ -368,7 +368,7 @@
     .right-side
     .name
     .lets-talk-button-de {
-    width: 225px !important; /* Ensure this width is applied */
+    width: 225px !important;
   }
 }
 

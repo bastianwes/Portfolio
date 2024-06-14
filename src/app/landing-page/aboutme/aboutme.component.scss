@@ -79,7 +79,7 @@
 
     img {
       height: auto;
-      width: auto; /* Behalte das Seitenverhältnis bei */
+      width: auto;
       object-fit: fill;
     }
   }
@@ -91,10 +91,10 @@
 
 @media (max-width: 1480px) {
   .about-me-container .about-me-section {
-    display: flex; /* Ensure this is what you want */
+    display: flex;
 
     .left-side {
-      width: 35%; /* Set the width to 35% */
+      width: 35%;
 
       .about-me h1 {
         font-size: 65px;

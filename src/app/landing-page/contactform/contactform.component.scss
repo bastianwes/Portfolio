@@ -39,7 +39,7 @@
   align-items: center;
   width: 100%;
   background-color: #141d2f;
-  position: relative; /* Um die absolute Positionierung von .purple-shadow-bottom zu ermöglichen */
+  position: relative;
   overflow: hidden;
   padding-bottom: 100px;
 
@@ -273,13 +273,13 @@
           color: #9747ff;
 
           a {
-            text-decoration: none; /* Entfernt die Linie unter dem Link */
+            text-decoration: none;
             transition: color 0.3s ease;
-            color: inherit; /* Vererbt die Farbe der Elternklasse */
+            color: inherit;
           }
 
           a:hover {
-            color: #5403bd; /* Farbe beim Hover bleibt dieselbe */
+            color: #5403bd;
           }
         }
       }
@@ -302,7 +302,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  line-height: 1.5; /* Adjust this value as needed */
+  line-height: 1.5;
 }
 
 .popup p {
