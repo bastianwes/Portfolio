@@ -100,12 +100,15 @@
 
 select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
-  border: 1px solid #1f1e1e;
-  background-color: #5a5959;
+  border: 2px solid #1f1e1e;
+  background-color: #9747ff;
   font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 select:focus {

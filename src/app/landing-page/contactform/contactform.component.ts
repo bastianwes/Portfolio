@@ -69,10 +69,8 @@ export class ContactformComponent implements OnInit {
           next: (response) => {
             ngForm.resetForm();
           },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
+          error: (error) => {},
+          complete: () => {},
         });
     }
   }
