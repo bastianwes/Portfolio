@@ -3,7 +3,7 @@
     <div class="about-me-section">
         <div class="left-side">
             <div class="about-me">
-                <h1 data-aos="fade-in" [ngClass]="{'aboutMeDe': germanIsSelected}">
+                <h1 class="hidden" [ngClass]="{'aboutMeDe': germanIsSelected}">
                     {{'aboutMe' | translate}}
                 </h1>
                 <p>
@@ -23,7 +23,7 @@
                     <div class="left-side-img">
                         <img src="assets/img/puzzle desktop.svg" alt="">
                     </div>
-                    <div class="right-side-info" data-aos="fade-in">
+                    <div class="right-side-info">
                         <p>
                             {{'aboutMeTextSecond' | translate}}
                         </p>

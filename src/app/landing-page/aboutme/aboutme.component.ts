@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { AnimationService } from '../../animation.service';
 
 @Component({
   selector: 'app-aboutme',
@@ -14,9 +15,13 @@ export class AboutmeComponent {
   lang: string = '';
   germanIsSelected: boolean = false;
 
-  constructor(private translateService: TranslateService) {}
+  constructor(
+    private translateService: TranslateService,
+    private animationService: AnimationService
+  ) {}
 
   ngOnInit(): void {
+    this.animationService.applyAnimation();
     this.lang = localStorage.getItem('lang') || 'en';
     this.germanIsSelected = this.lang === 'de';
     this.translateService.use(this.lang);
